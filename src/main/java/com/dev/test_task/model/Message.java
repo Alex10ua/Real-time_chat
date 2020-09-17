@@ -1,35 +1,30 @@
 package com.dev.test_task.model;
 
 public class Message {
-    private String content;
-    private String sender;
-    private MessageType messageType;
+    private String message;
+    private String fromLogin;
 
-    public enum MessageType{
-        CHAT,JOIN,LEAVE
+    public String getMessage() {
+        return message;
     }
 
-    public String getContent() {
-        return content;
+    public void setMessage(String message) {
+        this.message = message;
     }
 
-    public void setContent(String content) {
-        this.content = content;
+    public String getFromLogin() {
+        return fromLogin;
     }
 
-    public String getSender() {
-        return sender;
+    public void setFromLogin(String fromLogin) {
+        this.fromLogin = fromLogin;
     }
 
-    public void setSender(String sender) {
-        this.sender = sender;
-    }
-
-    public MessageType getMessageType() {
-        return messageType;
-    }
-
-    public void setMessageType(MessageType messageType) {
-        this.messageType = messageType;
+    @Override
+    public String toString() {
+        return "Message{" +
+                "message='" + message + '\'' +
+                ", fromLogin='" + fromLogin + '\'' +
+                '}';
     }
 }
